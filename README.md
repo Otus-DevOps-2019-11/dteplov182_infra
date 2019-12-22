@@ -72,4 +72,5 @@ Host someinternalhost
 
 Для тестов необходимы эти данные
 bastion_IP = 35.210.141.81
+
 someinternalhost_IP = 35.210.141.81
