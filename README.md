@@ -6,6 +6,39 @@ dteplov182 Infra repository
 git push -f --set-upstream origin play-travis
 ```
 **-f, --force**  Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it. This flag disables the check.
+
+```bash
+sudo journalctl -u google-startup-scripts.service
+```
+Проверить статус стартап скрипта
+**В стартап скрипте лучше не использовать русский язык**
+
+## ДЗ 4
+Команда для создания правила файрвола
+```bash
+gcloud compute firewall-rules create default-puma-server \
+--direction=INGRESS \
+--priority=1000 \
+--network=default \
+--action=ALLOW \
+--rules=tcp:9292 \
+--source-ranges=0.0.0.0/0 \
+--target-tags=puma-server
+```
+Команда для создания виртуальной машины:
+```bash
+gcloud compute instances create reddit-app \
+--boot-disk-size=10GB \
+--image-family ubuntu-1604-lts \
+--image-project=ubuntu-os-cloud \
+--machine-type=g1-small \
+--tags puma-server \
+--restart-on-failure \
+--metadata \
+startup-script-url=https://storage.googleapis.com/otus_hw_4/startup_script.sh
+```
+Сам скрипт я разместил в бакете.
+
 ## ДЗ 3
 Команда для прыжка через бастион во внутренную машину с передачей ключа:
 ```bash
