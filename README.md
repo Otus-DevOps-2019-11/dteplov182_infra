@@ -6,14 +6,12 @@ dteplov182 Infra repository
 git push -f --set-upstream origin play-travis
 ```
 **-f, --force**  Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it. This flag disables the check.
-
-```bash
-sudo journalctl -u google-startup-scripts.service
-```
-Проверить статус стартап скрипта
-**В стартап скрипте лучше не использовать русский язык**
-
 ## ДЗ 4
+
+testapp_IP = 35.210.211.34
+testapp_port = 9292
+
+
 Команда для создания правила файрвола
 ```bash
 gcloud compute firewall-rules create default-puma-server \
@@ -45,10 +43,15 @@ startup-script-url=https://storage.googleapis.com/otus_hw_4/startup_script.sh
 ssh -t -i <KEYFILE> -A <BASTION_USER>@<BASTION_IP> 'ssh <INTERNAL_IP>'
 ```
 **-t**      Force pseudo-tty allocation.
+
 **-i** identity_file
-**-A**      Enables forwarding of the authentication agent connection.  This can also be specified on a per-host basis in a configuration file.
+
+**-A**      Enables forwarding of the authentication agent connection.
+
 **Либо можно использовать ключ** **-J**
+
 Настроим SSH для подключеня сразу к внутренней машине используя алиасы ssh:
+
 ```bash
 cat ~/.ssh/config
 Host bastion
