@@ -1,0 +1,8 @@
+project          = "infra-262810"
+public_key_path  = "~/.ssh/appuser.pub"
+private_key_path = "~/.ssh/appuser"
+disk_image       = "reddit-base"
+region           = "europe-west1"
+zone             = "europe-west1-b"
+target_tags      = "reddit-app"
+instance_count   = 2
