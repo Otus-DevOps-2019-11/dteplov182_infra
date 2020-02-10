@@ -1,0 +1,10 @@
+{
+      "project_id": "infra-777",
+      "source_image_family": "lubuntu-1604-lts",
+      "machine_type": "f1-micro",
+      "image_description":"Soft image",
+      "disk_size":"110",
+      "disk_type":"pd-standard",
+      "tags":"tag1,tag2",
+      "zone":"europe-west1-d"
+}
