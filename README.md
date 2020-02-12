@@ -6,6 +6,14 @@ dteplov182 Infra repository
 git push -f --set-upstream origin play-travis
 ```
 **-f, --force**  Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it. This flag disables the check.
+## ДЗ 6
+
+При добавлении SSH ключей вручную, они удалятся после **terraform apply**
+
+## ДЗ 5
+
+ничего полезного не записал :(
+
 ## ДЗ 4
 
 testapp_IP = 35.210.211.34
